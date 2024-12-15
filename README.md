@@ -30,6 +30,7 @@ Clone the repository:
 ```bash
 git clone <URL>
 cd file_name
+```bash
 
 Install the dependencies.
 
