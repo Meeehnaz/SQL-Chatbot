@@ -1,13 +1,12 @@
 # SQL-Chatbot
 
 ## **Overview**  
-
 This Chatbot functions as a Dual Query Chatbot which is designed to interact seamlessly with both structured SQL databases and unstructured data represented by vector embeddings. Using LangChain's advanced tool-calling capabilities, the chatbot dynamically decides whether to query an SQL database or leverage vector embeddings based on user input.  
 
 ## **Features**  
 - **Dual Query Handling**:  
-  - Handles SQL-based queries for structured data.  
-  - Supports vector-based queries for semantic search or similarity matching.  
+  - SQL-based queries for structured data.  
+  - Vector-based queries for semantic search or similarity matching.  
 - **Tool Calling**: Powered by LangChain's tool-calling framework for dynamic query resolution.  
 - **Vector Search**: Utilizes FAISS (Facebook AI Similarity Search) for efficient vector embedding management.  
 - **SQL Agent**: Employs LangChain's SQL agents for precise database queries.  
@@ -26,29 +25,38 @@ This Chatbot functions as a Dual Query Chatbot which is designed to interact sea
 
 ### **2. Installation**  
 Clone the repository:  
+```bash
 git clone <URL>
 cd file_name
+```
 
-Install the dependencies.
+Install the dependencies:  
+```bash
+pip install -r requirements.txt
+```
 
-### **3. Configure Database and Embeddings**
-Update the config.py file with your SQL database credentials.
-Add your FAISS vector index file or set up FAISS from scratch.
+### **3. Configure Database and Embeddings**  
+- Update the `config.py` file with your SQL database credentials.  
+- Add your FAISS vector index file or set up FAISS from scratch.  
 
-### **4. Run the Chatbot**
+### **4. Run the Chatbot**  
+Run the application:  
+```bash
 uvicorn main:app --reload
+```
 
-## **Usage**
-1. Ask SQL-related queries, such as:
-"How many users registered last month?"
-2. Ask semantic questions for vector embeddings, such as:
-"Explain the document in few sentences"
-The chatbot will automatically route the query to the appropriate tool.
+## **Usage**  
+1. Ask SQL-related queries, such as:  
+   *"How many users registered last month?"*  
+2. Ask semantic questions for vector embeddings, such as:  
+   *"Explain the document in a few sentences."*  
 
-## **How It Works**
-1. The user inputs a query.
-2. The chatbot analyzes the intent using LangChain's tool-calling mechanism.
-3. Based on the intent:
-- SQL Agent queries the SQL database.
-- Vector Search uses FAISS for similarity-based results.
+The chatbot will automatically route the query to the appropriate tool based on the intent.  
+
+## **How It Works**  
+1. The user inputs a query.  
+2. The chatbot analyzes the intent using LangChain's tool-calling mechanism.  
+3. Based on the intent:  
+   - SQL Agent queries the SQL database.  
+   - Vector Search uses FAISS for similarity-based results.  
 
