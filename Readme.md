@@ -1,4 +1,3 @@
-```markdown
 # SQL-Chatbot
 
 ## **Overview**  
