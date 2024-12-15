@@ -59,4 +59,4 @@ The chatbot will automatically route the query to the appropriate tool based on 
 3. Based on the intent:  
    - SQL Agent queries the SQL database.  
    - Vector Search uses FAISS for similarity-based results.  
-```
+
